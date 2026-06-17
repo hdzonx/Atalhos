@@ -18,6 +18,10 @@ Verificar a instalação:
 
 	ls -l /usr/libexec/singularity/bin/starter-suid
 
+	which singularity
+
+	hash -r # Limpa o cache de comandos do shell
+
 # Instalar e executar o salome meca
 
 	singularity run --app install salome_meca-lgpl-2024.1.0-1-20240327-scibian-11.sif
@@ -27,6 +31,14 @@ Para executar o Salome Meca, colar no terminal o comando (no diretório de insta
 
 	./salome_meca-lgpl-2024.1.0-1-20240327-scibian-11
 
-	which singularity
+	A mensagem completa do terminal será algo do tipo:
 
-	hash -r # Limpa o cache de comandos do shell
+	To start salome_meca, just use:
+	  /home/hudson/Downloads/salome_meca-lgpl-2024.1.0-1-20240327-scibian-11
+	or (in the installation directory):
+	  ./salome_meca-lgpl-2024.1.0-1-20240327-scibian-11
+
+	If you want to check your configuration, use:
+	  singularity run --app check salome_meca-lgpl-2024.1.0-1-20240327-scibian-11.sif
+
+
